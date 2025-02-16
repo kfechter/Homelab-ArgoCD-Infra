@@ -35,7 +35,7 @@ spec:
 
         containerImage:
           repository: cloudflare/cloudflared
-          tag: 2022.5.0
+          tag: 2025.2.0
           pullPolicy: Always
         containerCommand:
           - "cloudflared"
