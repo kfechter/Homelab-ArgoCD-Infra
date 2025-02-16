@@ -92,6 +92,8 @@ spec:
                     # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
                     - hostname: gitops.kennethfechter.com
                       service: http://argocd-server.argocd.svc.cluster.local:80
+                    - hostname: longhorn.kennethfechter.com
+                      service: http://longhorn-ui.longhorn-system.svc.cluster.local:80
                     - service: http_status:404
   syncPolicy:
     automated:
