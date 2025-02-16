@@ -8,7 +8,7 @@ spec:
   project: default
   destination:
     namespace: cloudflared
-    server: https://kubernetes.default.svc
+    server: {{ .Values.spec.destination.server }}
   source:
     repoURL: https://helmcharts.gruntwork.io
     chart: k8s-service
