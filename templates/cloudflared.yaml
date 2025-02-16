@@ -91,7 +91,9 @@ spec:
                   ingress:
                     # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
                     - hostname: gitops.kennethfechter.com 
-                      service: https://argocd-server.argocd.svc.cluster.local:443
+                      service: https://argocd-server.argocd.svc
+                      originRequest:
+                        noTLSVerify: true
                     - service: http_status:404
   syncPolicy:
     automated:
