@@ -93,7 +93,7 @@ spec:
                     - hostname: gitops.kennethfechter.com
                       service: http://argocd-server.argocd.svc.cluster.local:80
                     - hostname: longhorn.kennethfechter.com
-                      service: http://longhorn-ui.longhorn-system.svc.cluster.local:8000
+                      service: http://longhorn-frontend.longhorn-system.svc.cluster.local:80
                     - service: http_status:404
   syncPolicy:
     automated:
