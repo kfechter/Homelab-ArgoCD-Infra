@@ -90,10 +90,8 @@ spec:
                   # E.g. `cloudflared tunnel route dns example-tunnel tunnel.example.com`.
                   ingress:
                     # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
-                    - hostname: gitops.kennethfechter.com 
-                      service: https://argocd-server.argocd.svc
-                      originRequest:
-                        noTLSVerify: true
+                    - hostname: gitops.kennethfechter.com
+                      service: http://argocd-server.argocd.svc.cluster.local:80
                     - service: http_status:404
   syncPolicy:
     automated:
